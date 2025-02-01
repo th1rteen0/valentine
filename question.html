@@ -26,24 +26,35 @@
                 <script>
                     function moveButton() {
                         const button = document.getElementById('noButton');
-                        const buffer = 100;
-
+                        const buffer = 50; // Smaller buffer for better movement
+                
                         const maxX = window.innerWidth - button.offsetWidth - buffer;
                         const maxY = window.innerHeight - button.offsetHeight - buffer;
-
+                
                         // Generate random positions within the screen boundaries
                         let x = Math.random() * maxX;
                         let y = Math.random() * maxY;
-
+                
                         // Ensure the button doesn't go off the screen
-                        x = Math.max(buffer, Math.min(x, maxX)); // Add buffer to the minimum value
-                        y = Math.max(buffer, Math.min(y, maxY)); // Add buffer to the minimum value
-
+                        x = Math.max(buffer, Math.min(x, maxX));
+                        y = Math.max(buffer, Math.min(y, maxY));
+                
                         // Apply the new position
                         button.style.left = `${x}px`;
                         button.style.top = `${y}px`;
                     }
-                </script> 
+                
+                    const button = document.getElementById('noButton');
+                
+                    // Detect if the user is on a mobile device
+                    if (window.matchMedia("(pointer: coarse)").matches) {
+                        // Mobile: Move on click
+                        button.addEventListener("click", moveButton);
+                    } else {
+                        // Desktop: Move on hover
+                        button.addEventListener("mouseover", moveButton);
+                    }
+                </script>
                 
             </div>
 
