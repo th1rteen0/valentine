@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     /* background-color: #Fdc8b8; */
-    background-image: url("/images/sparkles.gif");
+    background-image: url("images/sparkles.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
