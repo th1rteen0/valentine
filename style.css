@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #Fdc8b8; */
+    background-image: url("/images/Animated Hearts.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.header {
+    font-family: 'Nunito';
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFB6C1;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+/* .btn:hover {
+    background-color: transparent;
+} */
+
+.image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: red solid; */
+    padding: 20px;
+}
+
+.image_container img {
+    width: 36%;
+    /* border: blue solid; */
+}
+
+
+.buttons_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20px;
+    margin-left: 20px; */
+    /* border: black solid; */
+}
+
+.btn {
+    background-color: #FFB6C1;
+    color: #d35b41;
+    padding: 15px 30px;  /* Increased padding for bigger buttons */
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;     /* Increased font size */
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+#yesButton {
+    position: static;
+    margin-right: 125px;
+    /* Smooth movement */
+}
+
+/* Position the "No" button absolutely within body */
+#noButton {
+    position: absolute;
+    margin-left: 275px;
+    transition: all 0.3s ease;
+    /* Smooth movement */
+}

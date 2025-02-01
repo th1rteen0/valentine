@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BE MINE (VALENTINE?)</title>
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body>
+        <div class="container">
+
+            <div >
+                <h1 class="header">would you be MY valentine?</h1>
+            </div>
+
+            <div class="image_container">
+                <img src="/images/two_dachshunds.JPG" alt="Two dschshunds cuddling">
+            </div>
+
+            <div class="buttons_container">
+
+                <a href="yes.html" target =_self title = "This button takes you to the yes page">
+                    <button class="btn" id="yesButton">i say yes to this dress</button>
+                </a>
+
+                <button class="btn" id="noButton" onmouseover="moveButton()">no</button>
+
+                <script>
+                    function moveButton() {
+                        const button = document.getElementById('noButton');
+                        const buffer = 100;
+
+                        const maxX = window.innerWidth - button.offsetWidth - buffer;
+                        const maxY = window.innerHeight - button.offsetHeight - buffer;
+
+                        // Generate random positions within the screen boundaries
+                        let x = Math.random() * maxX;
+                        let y = Math.random() * maxY;
+
+                        // Ensure the button doesn't go off the screen
+                        x = Math.max(buffer, Math.min(x, maxX)); // Add buffer to the minimum value
+                        y = Math.max(buffer, Math.min(y, maxY)); // Add buffer to the minimum value
+
+                        // Apply the new position
+                        button.style.left = `${x}px`;
+                        button.style.top = `${y}px`;
+                    }
+                </script> 
+                
+            </div>
+
+        </div>
+       
+    </body> 
+</html>

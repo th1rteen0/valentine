@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #Fdc8b8; */
+    background-image: url("/images/red_hearts.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.text {
+    font-family: 'Nunito';
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFB6C1;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: red solid; */
+    padding: 20px;
+}
+
+.image_container img {
+    width: 35%;
+    /* border: blue solid; */
+}
